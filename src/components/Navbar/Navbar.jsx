@@ -8,7 +8,8 @@ import Cart from "../../pages/Cart/Cart";
 import { Context } from "../../context/Context";
 
 export const NavBar = () => {
-  const [menu, setMenu] = useState("menu");
+  const [menu,setMenu] = useState("home");
+  const {getTotalCartAmount} = Context(Context);
 
   const handleMenuClick = (item) => {
     setMenu(item);
@@ -43,7 +44,7 @@ export const NavBar = () => {
         <img src={search_icon} alt="search" className="search_icon" />
         <Link to="/cart" className="navbar-search-icon">
         <img src={basket_icon} alt="" />
-          <div className={getTotalCartAmount() > 0 ? "dot" : ""}>
+          <div className={getTotalCartAmount() > 0 ? "dot" : ""}>  
           </div>
         </Link>
       <button>Sign in</button>

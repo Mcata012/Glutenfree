@@ -5,6 +5,10 @@ import { useNavigate } from 'react-router-dom';
 
 const Cart = () => {
 
+  //henter data fra context , food_list, cartItems, removeFromCart, getTotalCartAmount og navigate 
+  //getTotalCartAmount returnerer total pris for alle produkter
+  // (hvis denne er null så vil du ikke se den røde prikken i handlekurvem)
+  //cartitems[item.food_id] returnerer antall produkter i cart 
   const {cartItems, food_list, removeFromCart,getTotalCartAmount} = useContext(Context);
   const navigate = useNavigate();
 
@@ -12,6 +16,7 @@ const Cart = () => {
     <div className='cart'>
       <div className="cart-items">
         <div className="cart-items-title">
+
           <p>Items</p> <p>Title</p> <p>Price</p> <p>Quantity</p> <p>Total</p> <p>Remove</p>
         </div>
         <br />
@@ -37,11 +42,11 @@ const Cart = () => {
         <div className="cart-total">
           <h2>Total amount</h2>
           <div>
-            <div className="cart-total-details"><p>Subtotal</p><p>${getTotalCartAmount()}</p></div>
+            <div className="cart-total-details"><p>Subtotal</p><p>Kr {getTotalCartAmount()}</p></div>
             <hr />
-            <div className="cart-total-details"><p>Delivery Fee</p><p>${getTotalCartAmount()===0?0:5}</p></div>
+            <div className="cart-total-details"><p>Delivery Fee</p><p>Kr {getTotalCartAmount()===0?0:5}</p></div>
             <hr />
-            <div className="cart-total-details"><b>Total</b><b>${getTotalCartAmount()===0?0:getTotalCartAmount()+5}</b></div>
+            <div className="cart-total-details"><b>Total</b><b>Kr {getTotalCartAmount()===0?0:getTotalCartAmount()+5}</b></div>
           </div>
           <button onClick={()=>navigate('/order')}>PROCEED TO CHECKOUT</button>
         </div>
