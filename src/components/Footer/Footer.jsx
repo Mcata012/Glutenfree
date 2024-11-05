@@ -16,7 +16,6 @@ const Footer = () => {
             </div>
         </div>
         <div className="footer-content-center">
-            <h2>COMPANY</h2>
             <ul>
                 <li>Home</li>
                 <li>About us</li>
@@ -25,7 +24,7 @@ const Footer = () => {
             </ul>
         </div>
         <div className="footer-content-right">
-            <h2>GET IN TOUCH</h2>
+            <h2>CONTACT US</h2>
             <ul>
                 <li>+47 0000000</li>
                 <li>contact@glutenfree.com</li>
