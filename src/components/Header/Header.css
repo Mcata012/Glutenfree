@@ -2,8 +2,12 @@
   height: 34vw;
   position: relative;
   margin: 30px auto;
-  background: url(../../assets/header.png);
-  background-size: contain;
+  background: url(../../assets/food_10.png);
+  background-size: cover;
+  background-size: 90% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 50px;
 }
 
 .header-content {
