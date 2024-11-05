@@ -1,9 +1,9 @@
 import { useState } from "react";
-import { Link } from "react-router-dom"; // Import Link if using React Router
+import { Link } from "react-router-dom";
 import "./NavBar.css";
 import gluten_free from "../../assets/gluten_free.png";
 import search_icon from "../../assets/search_icon.png";
-import basket_icon from "../../assets/basket_icon.png";
+import {basket_icon} from "../../assets/basket_icon.png";
 
 export const NavBar = () => {
   const [menu, setMenu] = useState("menu");
@@ -14,7 +14,7 @@ export const NavBar = () => {
 
   return (
     <div className="navbar">
-      <img
+      <Link to="/" /><img
         className="logo"
         src={gluten_free}
         alt="logo"
@@ -24,33 +24,28 @@ export const NavBar = () => {
         <Link
           to="/"
           onClick={() => handleMenuClick("home")}
-          className={menu === "home" ? "active" : ""}
-        >
-          Home
+          className={menu === "home" ? "active" : ""}>Home
         </Link>
         <a
           href="#explore-menu"
           onClick={() => handleMenuClick("menu")}
-          className={menu === "menu" ? "active" : ""}
-        >
-          Menu
+          className={menu === "menu" ? "active" : ""}>Menu
         </a>
         <a
           href="#footer"
           onClick={() => handleMenuClick("contact")}
-          className={menu === "contact" ? "active" : ""}
-        >
-          Contact Us
+          className={menu === "contact" ? "active" : ""}>Contact Us
         </a>
       </ul>
       <div className="navbar-right">
         <img src={search_icon} alt="search" className="search_icon" />
-        <div className="basket_icon">
-          <img src={basket_icon} alt="basket" />
-          <div className="dot"></div>
-        </div>
-      </div>
+        <Link to="/cart" className="navbar-search-icon">
+        <img src={basket_icon} alt="" />
+          <div className={getTotalCartAmount() > 0 ? "dot" : ""}>
+          </div>
+        </Link>
       <button>Sign in</button>
+    </div>
     </div>
   );
 };
