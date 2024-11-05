@@ -69,13 +69,13 @@
   cursor: pointer;
 }
 
-.cart-promocode {
+.dicount-input {
   flex: 1;
 }
-.cart-promocode p {
+.dicount-input p {
   color: #555555;
 }
-.cart-promocode-input {
+.dicount-input {
   margin-top: 10px;
   display: flex;
   justify-content: space-between;
@@ -83,13 +83,13 @@
   background-color: #eaeaea;
   border-radius: 4px;
 }
-.cart-promocode-input input {
+.discount-input input {
   background: transparent;
   border: none;
   outline: none;
   padding-left: 10px;
 }
-.cart-promocode-input button {
+.dicount-input button {
   width: max(10vw, 150px);
   padding: 12px 5px;
   background-color: black;
@@ -102,7 +102,7 @@
   .cart-bottom {
     flex-direction: column-reverse;
   }
-  .cart-promocode {
+  .discourt-input {
     justify-content: start;
   }
 }

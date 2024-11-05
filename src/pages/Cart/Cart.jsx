@@ -25,7 +25,7 @@ const Cart = () => {
                 <p>{item.food_name}</p>  
                 <p>${item.food_price}</p>
                 <div>{cartItems[item.food_id]}</div>
-                <p>${item.food_price*cartItems[item.food_id]}</p>
+                <p>Kr  {item.food_price*cartItems[item.food_id]}</p>
                 <p className='cart-items-remove-icon' onClick={()=>removeFromCart(item.food_id)}>x</p>
               </div>
               <hr />
@@ -35,7 +35,7 @@ const Cart = () => {
       </div>
       <div className="cart-bottom">
         <div className="cart-total">
-          <h2>Cart Totals</h2>
+          <h2>Total amount</h2>
           <div>
             <div className="cart-total-details"><p>Subtotal</p><p>${getTotalCartAmount()}</p></div>
             <hr />
@@ -47,9 +47,9 @@ const Cart = () => {
         </div>
         <div className="cart-promocode">
           <div>
-            <p>If you have a promo code, Enter it here</p>
-            <div className='cart-promocode-input'>
-              <input type="text" placeholder='promo code'/>
+            <p>Discount code, Enter it here</p>
+            <div className='dicount-input'>
+              <input type="text" placeholder='discount code'/>
               <button>Submit</button>
             </div>
           </div>
