@@ -50,7 +50,7 @@ const FoodItem = ({ image, name, price, desc, id }) => {
   );
 };
 
-// Optional: Add PropTypes for type-checking
+// Noe : PropTypes for typekontroll
 FoodItem.propTypes = {
   image: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
