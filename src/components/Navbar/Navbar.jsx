@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./NavBar.css";
-import gluten_free from "../../assets/gluten_free.jpg";
+import gluten_free from "../../assets/gluten_free.png";
 import search_icon from "../../assets/search_icon.png";
 import basket_icon from "../../assets/basket_icon.png";
 
@@ -51,3 +51,5 @@ export const NavBar = () => {
     </div>
   );
 };
+
+export default NavBar;
