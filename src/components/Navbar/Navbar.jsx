@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom"; // Import Link if using React Router
 import "./NavBar.css";
 import gluten_free from "../../assets/gluten_free.png";
 import search_icon from "../../assets/search_icon.png";
@@ -20,31 +21,33 @@ export const NavBar = () => {
         style={{ width: "70px", height: "auto" }}
       />
       <ul className="navbar-menu">
-        <li
-          className={menu === "home" ? "active" : ""}
+        <Link
+          to="/"
           onClick={() => handleMenuClick("home")}
+          className={menu === "home" ? "active" : ""}
         >
           Home
-        </li>
-        <li
-          className={menu === "menu" ? "active" : ""}
+        </Link>
+        <a
+          href="#explore-menu"
           onClick={() => handleMenuClick("menu")}
+          className={menu === "menu" ? "active" : ""}
         >
           Menu
-        </li>
-        <li
-          className={menu === "contact-us" ? "active" : ""}
-          onClick={() => handleMenuClick("contact-us")}
+        </a>
+        <a
+          href="#footer"
+          onClick={() => handleMenuClick("contact")}
+          className={menu === "contact" ? "active" : ""}
         >
           Contact Us
-        </li>
+        </a>
       </ul>
       <div className="navbar-right">
         <img src={search_icon} alt="search" className="search_icon" />
         <div className="basket_icon">
-          <img src={basket_icon} alt="basket_icon" />
-          <div className="dot"></div>{" "}
-          {}
+          <img src={basket_icon} alt="basket" />
+          <div className="dot"></div>
         </div>
       </div>
       <button>Sign in</button>

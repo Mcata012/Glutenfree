@@ -3,9 +3,9 @@ import './FoodItem.css'
 import { assets } from '../../assets/assets'
 import {Context}  from '../../context/Context';
 
-//const FoodItem = ({ image, name, price, desc , id }) => {
+const FoodItem = ({ image, name, price, desc , id }) => {
 
-    //const [itemCount, setItemCount] = useState(0);
+    const [itemCount, setItemCount] = useState(0);
     const {cartItems,addToCart,removeFromCart} = useContext(Context);
 
     return (
