@@ -4,7 +4,6 @@ import "./NavBar.css";
 import gluten_free from "../../assets/gluten_free.png";
 import search_icon from "../../assets/search_icon.png";
 import {basket_icon} from "../../assets/basket_icon.png";
-import Cart from "../../pages/Cart/Cart";
 import { Context } from "../../context/Context";
 
 export const NavBar = () => {

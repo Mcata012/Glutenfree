@@ -1,11 +1,12 @@
-import { useContext, useState } from 'react'
+import { useContext } from 'react'
 import './FoodItem.css'
 import { assets } from '../../assets/assets'
 import {Context}  from '../../context/Context';
 
+// eslint-disable-next-line react/prop-types
 const FoodItem = ({ image, name, price, desc , id }) => {
 
-    const [itemCount, setItemCount] = useState(0);
+    //const [] = useState(0);
     const {cartItems,addToCart,removeFromCart} = useContext(Context);
 
     return (

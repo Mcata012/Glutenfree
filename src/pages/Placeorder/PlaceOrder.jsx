@@ -1,6 +1,6 @@
 import  { useContext, useEffect, useState } from 'react'
 import './PlaceOrder.css'
-import { StoreContext } from '../../Context/StoreContext'
+import { StoreContext } from '../../context/Context'
 import { assets } from '../../assets/assets';
 import { useNavigate } from 'react-router-dom';
 
@@ -32,7 +32,7 @@ const PlaceOrder = () => {
         if (getTotalCartAmount() === 0) {
             navigate('/')
         }
-    }, [])
+    }, )
 
     return (
         <div className='place-order'>
@@ -79,4 +79,4 @@ const PlaceOrder = () => {
     )
 }
 
-export default PlaceOrder
+export default PlaceOrder;

@@ -1,13 +1,15 @@
-import { createContext, useEffect, useState } from "react";
+/* eslint-disable react/prop-types */
+import { createContext, useState } from "react";
 import { food_list,menu_list } from "../assets/assets";
 
 
+// eslint-disable-next-line react-refresh/only-export-components
 export const Context = createContext(null);
 
 const ContextProvider = (props) => {
 
     const [cartItems,setCartItems] = useState({});
-    const [ordersData,setOrdersData] = useState({});
+    
     
     const addToCart = (itemId) =>{
         if(!cartItems[itemId])
