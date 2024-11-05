@@ -61,8 +61,8 @@
 
 .cart-total button {
   border: none;
-  color: white;
-  background-color: #ff4c24;
+  color: goldenrod;
+  background-color: transparent;
   width: max(15vw, 200px);
   padding: 12px 0px;
   border-radius: 4px;
@@ -92,7 +92,7 @@
 .dicount-input button {
   width: max(10vw, 150px);
   padding: 12px 5px;
-  background-color: black;
+  background-color: #495574;
   border: none;
   color: white;
   border-radius: 4px;
