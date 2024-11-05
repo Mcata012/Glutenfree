@@ -1,4 +1,5 @@
 import { useContext } from 'react';
+import PropTypes from 'prop-types';
 import './ExploreMenu.css';
 import Context from '../../context/Context';
 
@@ -16,7 +17,7 @@ const ExploreMenu = ({ setCategory, category }) => {
         Choose from a diverse menu featuring a delectable array of dishes. Our mission is to satisfy your cravings and elevate your dining experience, one delicious meal at a time.
       </p>
       <div className="explore-menu-list">
-        {menu_list.map((item, index) => (
+        {menu_list?.map((item, index) => (
           <div
             key={index}
             onClick={() => handleCategoryClick(item.menu_name)}
@@ -34,6 +35,11 @@ const ExploreMenu = ({ setCategory, category }) => {
       <hr className="explore-menu-hr" />
     </div>
   );
+};
+
+ExploreMenu.propTypes = {
+  setCategory: PropTypes.func.isRequired,
+  category: PropTypes.string,
 };
 
 export default ExploreMenu;
