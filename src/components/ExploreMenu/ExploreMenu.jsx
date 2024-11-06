@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import PropTypes from "prop-types";
 import "./ExploreMenu.css";
-import Context from "../../context/Context";
+import { Context } from "../../context/Context";
 
 //explremenu sender props setcategory og category
 // oppdaterer valg av kategori mens kategori er den nåværende
