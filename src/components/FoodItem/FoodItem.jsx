@@ -1,15 +1,15 @@
-import { useContext } from 'react';
-import PropTypes from 'prop-types';
-import './FoodItem.css';
-import { assets } from '../../assets/assets';
-import { Context } from '../../context/Context';
+import { useContext } from "react";
+import PropTypes from "prop-types";
+import "./FoodItem.css";
+import { assets } from "../../assets/assets";
+import { Context } from "../../context/Context";
 
 const FoodItem = ({ image, name, price, desc, id }) => {
   const { cartItems, addToCart, removeFromCart } = useContext(Context);
 
   // Debugg logs
-  console.log('cartItems:', cartItems);
-  console.log('assets:', assets);
+  console.log("cartItems:", cartItems);
+  console.log("assets:", assets);
 
   return (
     <div className="food-item">
