@@ -1,16 +1,18 @@
-import { useContext } from 'react';
-import PropTypes from 'prop-types';
-import './FoodItem.css';
-import { assets } from '../../assets/assets';
-import { Context } from '../../context/Context';
+import { useContext } from "react";
+import PropTypes from "prop-types";
+import "./FoodItem.css";
+import { assets } from "../../assets/assets";
+import { Context } from "../../context/Context";
 
+//viser informasjon om varene i handlekurven , henter alt av bilde , navn etc .
 const FoodItem = ({ image, name, price, desc, id }) => {
   const { cartItems, addToCart, removeFromCart } = useContext(Context);
 
   // Debugging logs
-  console.log('cartItems:', cartItems);
-  console.log('assets:', assets);
+  console.log("cartItems:", cartItems);
+  console.log("assets:", assets);
 
+  //viser konteksten, lar brukeren legge til eller fjerne produkter også fra handlekurven
   return (
     <div className="food-item">
       <div className="food-item-img-container">

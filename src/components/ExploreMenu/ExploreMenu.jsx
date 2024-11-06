@@ -1,20 +1,22 @@
-import { useContext } from 'react';
-import PropTypes from 'prop-types';
-import './ExploreMenu.css';
-import Context from '../../context/Context';
+import { useContext } from "react";
+import PropTypes from "prop-types";
+import "./ExploreMenu.css";
+import Context from "../../context/Context";
 
 const ExploreMenu = ({ setCategory, category }) => {
   const { menu_list } = useContext(Context);
 
   const handleCategoryClick = (menuName) => {
-    setCategory((prev) => (prev === menuName ? 'All' : menuName));
+    setCategory((prev) => (prev === menuName ? "All" : menuName));
   };
 
   return (
     <div className="explore-menu" id="explore-menu">
       <h1>Explore Our Menu</h1>
       <p className="explore-menu-text">
-        Choose from a diverse menu featuring a delectable array of dishes. Our mission is to satisfy your cravings and elevate your dining experience, one delicious meal at a time.
+        Choose from a diverse menu featuring a delectable array of dishes. Our
+        mission is to satisfy your cravings and elevate your dining experience,
+        one delicious meal at a time.
       </p>
       <div className="explore-menu-list">
         {menu_list?.map((item, index) => (
@@ -26,7 +28,7 @@ const ExploreMenu = ({ setCategory, category }) => {
             <img
               src={item.menu_image}
               alt={item.menu_name}
-              className={category === item.menu_name ? 'active' : ''}
+              className={category === item.menu_name ? "active" : ""}
             />
             <p>{item.menu_name}</p>
           </div>
