@@ -3,20 +3,24 @@ import PropTypes from "prop-types";
 import "./ExploreMenu.css";
 import Context from "../../context/Context";
 
+//explremenu sender props setcategory og category
+// oppdaterer valg av kategori mens kategori er den nåværende
 const ExploreMenu = ({ setCategory, category }) => {
   const { menu_list } = useContext(Context);
 
+  //behandler valgt kategori , oppdaterer valg av kategori med den nye kategorien
   const handleCategoryClick = (menuName) => {
     setCategory((prev) => (prev === menuName ? "All" : menuName));
   };
 
   return (
+    //hoved containern
     <div className="explore-menu" id="explore-menu">
       <h1>Explore Our Menu</h1>
       <p className="explore-menu-text">
-        Choose from a diverse menu featuring a delectable array of dishes. Our
-        mission is to satisfy your cravings and elevate your dining experience,
-        one delicious meal at a time.
+        Choose from a diverse menu featuring a delectable array of gluten-free
+        dishes. Our mission is to satisfy your cravings and elevate your dining
+        experience, one delicious gluten-free meal at a time.
       </p>
       <div className="explore-menu-list">
         {menu_list?.map((item, index) => (
