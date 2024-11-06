@@ -1,6 +1,5 @@
 import { useContext } from "react";
 import PropTypes from "prop-types";
-import "./FoodItem.css";
 import { assets } from "../../assets/assets";
 import { Context } from "../../context/Context";
 
